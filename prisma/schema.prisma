@@ -14,9 +14,15 @@ enum UserRole {
   tenant
 }
 
+enum TenantStatus {
+  invited
+  active
+  inactive
+}
+
 model Organization {
   id         String     @id @default(cuid())
-  name       String
+  name       String     @unique
   users      User[]
   owners     Owner[]
   properties Property[]
@@ -97,6 +103,7 @@ model Tenant {
   inviteToken    String?      @unique
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt
+  status         TenantStatus @default(invited)
 
   @@unique([organizationId, email])
   @@index([organizationId])
