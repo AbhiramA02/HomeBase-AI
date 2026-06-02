@@ -1,3 +1,6 @@
+# HomeBase AI Manager
+AI-supported rentail housing platform for landlords/PM staff and renters.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
